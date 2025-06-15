@@ -1,0 +1,2823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive MCQ Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .instructions {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .option {
+            margin: 5px 0;
+        }
+        label {
+            cursor: pointer;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .results {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 5px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .score {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive MCQ Test</h1>
+    
+    <div class="instructions">
+        <h2>Instructions</h2>
+        <p>This is a multiple-choice practice test. For each question, select the best answer from the given options (a), (b), (c), or (d).</p>
+    </div>
+    
+    <form id="quizForm">
+
+        <div class="question">
+            <p><strong>Question 1:</strong> Cognitive science emerged as an interdisciplinary field combining ideas from which areas?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q1_a" name="q1" value="a">
+                    <label for="q1_a">(a) Astronomy, sociology, and economics.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q1_b" name="q1" value="b">
+                    <label for="q1_b">(b) Physics, chemistry, and biology.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q1_c" name="q1" value="c">
+                    <label for="q1_c">(c) Psychology, linguistics, mathematical logic, and information-processing models.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q1_d" name="q1" value="d">
+                    <label for="q1_d">(d) Anthropology, geology, and political science.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 2:</strong> What was a core tenet of Behaviorism in psychology?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q2_a" name="q2" value="a">
+                    <label for="q2_a">(a) Speculating about cognition or other unobservable phenomena is scientific.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q2_b" name="q2" value="b">
+                    <label for="q2_b">(b) Psychology should concern itself only with observable behavior.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q2_c" name="q2" value="c">
+                    <label for="q2_c">(c) Focus on internal mental states as primary drivers of action.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q2_d" name="q2" value="d">
+                    <label for="q2_d">(d) All learning is the result of innate knowledge structures.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 3:</strong> According to cognitive science, what is the single most fundamental idea about organisms?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q3_a" name="q3" value="a">
+                    <label for="q3_a">(a) They are primarily driven by unconscious instincts.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q3_b" name="q3" value="b">
+                    <label for="q3_b">(b) They respond mechanically to reinforcers and stimuli.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q3_c" name="q3" value="c">
+                    <label for="q3_c">(c) They are information processors.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q3_d" name="q3" value="d">
+                    <label for="q3_d">(d) Their behavior is solely determined by genetic predispositions.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 4:</strong> Which type of conditioning involves reflexive, automatic responses?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q4_a" name="q4" value="a">
+                    <label for="q4_a">(a) Operant conditioning.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q4_b" name="q4" value="b">
+                    <label for="q4_b">(b) Social learning.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q4_c" name="q4" value="c">
+                    <label for="q4_c">(c) Classical conditioning.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q4_d" name="q4" value="d">
+                    <label for="q4_d">(d) Insight learning.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 5:</strong> In classical conditioning, what happens to the association between a conditioned stimulus and an unconditioned stimulus?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q5_a" name="q5" value="a">
+                    <label for="q5_a">(a) It is weakened.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q5_b" name="q5" value="b">
+                    <label for="q5_b">(b) It is strengthened.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q5_c" name="q5" value="c">
+                    <label for="q5_c">(c) It is eliminated.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q5_d" name="q5" value="d">
+                    <label for="q5_d">(d) It remains neutral.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 6:</strong> The famous example of conditioning involving dogs salivating to the sound of a bell is associated with which researcher?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q6_a" name="q6" value="a">
+                    <label for="q6_a">(a) B.F. Skinner.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q6_b" name="q6" value="b">
+                    <label for="q6_b">(b) Edward Tolman.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q6_c" name="q6" value="c">
+                    <label for="q6_c">(c) Ivan Pavlov.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q6_d" name="q6" value="d">
+                    <label for="q6_d">(d) Karl Lashley.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 7:</strong> What did the Tolman and Honzik (1930) study on rats navigating mazes seem to demonstrate, contrary to behaviorist expectations?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q7_a" name="q7" value="a">
+                    <label for="q7_a">(a) That all learning requires immediate reinforcement.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q7_b" name="q7" value="b">
+                    <label for="q7_b">(b) That rats could only learn through direct punishment.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q7_c" name="q7" value="c">
+                    <label for="q7_c">(c) That reinforcement was not necessary for learning, showing latent learning.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q7_d" name="q7" value="d">
+                    <label for="q7_d">(d) That rats only learned simple stimulus-response connections.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 8:</strong> What concept was proposed by Tolman, Ritchie, and Kalish (1946) to explain how rats learned to navigate mazes in terms of spatial layout rather than movements?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q8_a" name="q8" value="a">
+                    <label for="q8_a">(a) Reflex arcs.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q8_b" name="q8" value="b">
+                    <label for="q8_b">(b) Cognitive maps.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q8_c" name="q8" value="c">
+                    <label for="q8_c">(c) Habituation curves.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q8_d" name="q8" value="d">
+                    <label for="q8_d">(d) Sensory adaptation.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 9:</strong> What did Tolman's concept of cognitive maps become fundamental for in cognitive science?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q9_a" name="q9" value="a">
+                    <label for="q9_a">(a) Explaining behavior solely through conditioning.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q9_b" name="q9" value="b">
+                    <label for="q9_b">(b) Proposing behavior in terms of representations or stored information.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q9_c" name="q9" value="c">
+                    <label for="q9_c">(c) Dismissing internal mental states as unscientific.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q9_d" name="q9" value="d">
+                    <label for="q9_d">(d) Understanding simple stimulus-response connections.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 10:</strong> Karl Lashley (1951) focused on the problem of explaining complex behavior, particularly challenging the view that movements are linked as a simple chain. What did he suggest instead?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q10_a" name="q10" value="a">
+                    <label for="q10_a">(a) That all behavior is random.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q10_b" name="q10" value="b">
+                    <label for="q10_b">(b) That behavior is solely determined by immediate environmental stimuli.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q10_c" name="q10" value="c">
+                    <label for="q10_c">(c) That complex behaviors are a product of prior planning and hierarchical organization.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q10_d" name="q10" value="d">
+                    <label for="q10_d">(d) That learning happens only through classical conditioning.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 11:</strong> The idea of subconscious information processing, where much behavior is controlled by planning mechanisms below conscious awareness, grew from the work of which researcher?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q11_a" name="q11" value="a">
+                    <label for="q11_a">(a) Ivan Pavlov.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q11_b" name="q11" value="b">
+                    <label for="q11_b">(b) Edward Tolman.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q11_c" name="q11" value="c">
+                    <label for="q11_c">(c) Karl Lashley.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q11_d" name="q11" value="d">
+                    <label for="q11_d">(d) B.F. Skinner.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 12:</strong> Alan Turing formalized the notion of a purely mechanical procedure using what concept?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q12_a" name="q12" value="a">
+                    <label for="q12_a">(a) Intuition.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q12_b" name="q12" value="b">
+                    <label for="q12_b">(b) Insight.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q12_c" name="q12" value="c">
+                    <label for="q12_c">(c) Algorithm.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q12_d" name="q12" value="d">
+                    <label for="q12_d">(d) Randomness.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 13:</strong> What is an idealized computing mechanism devised by Alan Turing, consisting of an infinitely long tape and a machine head?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q13_a" name="q13" value="a">
+                    <label for="q13_a">(a) An abacus.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q13_b" name="q13" value="b">
+                    <label for="q13_b">(b) A slide rule.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q13_c" name="q13" value="c">
+                    <label for="q13_c">(c) A Turing Machine.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q13_d" name="q13" value="d">
+                    <label for="q13_d">(d) A quantum computer.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 14:</strong> What problem did Turing mathematically prove cannot be solved by a purely mechanical procedure, meaning computer programs can get stuck in endless loops?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q14_a" name="q14" value="a">
+                    <label for="q14_a">(a) The Traveling Salesperson Problem.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q14_b" name="q14" value="b">
+                    <label for="q14_b">(b) The Decision Problem.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q14_c" name="q14" value="c">
+                    <label for="q14_c">(c) The Halting Problem.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q14_d" name="q14" value="d">
+                    <label for="q14_d">(d) The Encryption Problem.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 15:</strong> The Church-Turing thesis states that anything that can be done in mathematics by an algorithm can be done by what?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q15_a" name="q15" value="a">
+                    <label for="q15_a">(a) A human brain.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q15_b" name="q15" value="b">
+                    <label for="q15_b">(b) A supercomputer.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q15_c" name="q15" value="c">
+                    <label for="q15_c">(c) A Turing machine.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q15_d" name="q15" value="d">
+                    <label for="q15_d">(d) A random number generator.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 16:</strong> Which linguist proposed transformational grammar in "Syntactic Structures" (1957)?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q16_a" name="q16" value="a">
+                    <label for="q16_a">(a) B.F. Skinner.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q16_b" name="q16" value="b">
+                    <label for="q16_b">(b) George Miller.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q16_c" name="q16" value="c">
+                    <label for="q16_c">(c) Noam Chomsky.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q16_d" name="q16" value="d">
+                    <label for="q16_d">(d) Claude Shannon. \}</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 17:</strong> In Chomsky's transformational grammar, what is the distinction between the "deep structure" and the "surface structure" of a sentence?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q17_a" name="q17" value="a">
+                    <label for="q17_a">(a) Deep structure is the sounds, surface structure is the meaning.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q17_b" name="q17" value="b">
+                    <label for="q17_b">(b) Deep structure is how it's built from basic constituents, surface structure is the actual word organization.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q17_c" name="q17" value="c">
+                    <label for="q17_c">(c) Deep structure is conscious, surface structure is subconscious.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q17_d" name="q17" value="d">
+                    <label for="q17_d">(d) Deep structure is learned, surface structure is innate.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 18:</strong> The transformational principles of transformational grammar are examples of what?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q18_a" name="q18" value="a">
+                    <label for="q18_a">(a) Random linguistic mutations.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q18_b" name="q18" value="b">
+                    <label for="q18_b">(b) Emotional expressions.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q18_c" name="q18" value="c">
+                    <label for="q18_c">(c) Algorithms.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q18_d" name="q18" value="d">
+                    <label for="q18_d">(d) Purely statistical correlations.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 19:</strong> Claude E. Shannon's 1948 article "A mathematical theory of communication" marked the emergence of what?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q19_a" name="q19" value="a">
+                    <label for="q19_a">(a) Behaviorism.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q19_b" name="q19" value="b">
+                    <label for="q19_b">(b) Information theory.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q19_c" name="q19" value="c">
+                    <label for="q19_c">(c) Psychoanalysis.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q19_d" name="q19" value="d">
+                    <label for="q19_d">(d) Quantum mechanics.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 20:</strong> George Miller’s (1956) paper "The Magical Number Seven, Plus or Minus Two" proposed what about human sensory systems?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q20_a" name="q20" value="a">
+                    <label for="q20_a">(a) They have unlimited channel capacity.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q20_b" name="q20" value="b">
+                    <label for="q20_b">(b) They are all information channels with roughly the same channel capacity.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q20_c" name="q20" value="c">
+                    <label for="q20_c">(c) They are primarily influenced by emotional states.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q20_d" name="q20" value="d">
+                    <label for="q20_d">(d) They operate independently of each other.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 21:</strong> What strategy did Miller propose to increase the channel capacity of human perceptual systems?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q21_a" name="q21" value="a">
+                    <label for="q21_a">(a) Ignoring all incoming information.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q21_b" name="q21" value="b">
+                    <label for="q21_b">(b) Rapid serial processing.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q21_c" name="q21" value="c">
+                    <label for="q21_c">(c) Chunking information.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q21_d" name="q21" value="d">
+                    <label for="q21_d">(d) Increasing the amount of raw data.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 22:</strong> Donald Broadbent's 1958 book "Perception and Communication" developed one of the first models of how sensory information is processed. What phenomenon did he use to illustrate selective attention?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q22_a" name="q22" value="a">
+                    <label for="q22_a">(a) The phantom limb phenomenon.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q22_b" name="q22" value="b">
+                    <label for="q22_b">(b) The cocktail party phenomenon.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q22_c" name="q22" value="c">
+                    <label for="q22_c">(c) The placebo effect.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q22_d" name="q22" value="d">
+                    <label for="q22_d">(d) The Mozart effect.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 23:</strong> In Broadbent's model, what happens to information after it passes through a short-term store and before semantic interpretation?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q23_a" name="q23" value="a">
+                    <label for="q23_a">(a) It is completely discarded.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q23_b" name="q23" value="b">
+                    <label for="q23_b">(b) It passes through a selective filter.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q23_c" name="q23" value="c">
+                    <label for="q23_c">(c) It is immediately sent to long-term memory.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q23_d" name="q23" value="d">
+                    <label for="q23_d">(d) It is amplified for all channels.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 24:</strong> What was SHRDLU, the program written by Terry Winograd, designed to do?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q24_a" name="q24" value="a">
+                    <label for="q24_a">(a) Play chess against human opponents.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q24_b" name="q24" value="b">
+                    <label for="q24_b">(b) Diagnose medical conditions based on symptoms.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q24_c" name="q24" value="c">
+                    <label for="q24_c">(c) Interact with a user in a limited "micro-world" of colored blocks and answer questions about it.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q24_d" name="q24" value="d">
+                    <label for="q24_d">(d) Translate languages in real-time.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 25:</strong> Unlike earlier "chatterbots" like ELIZA, what did SHRDLU possess?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q25_a" name="q25" value="a">
+                    <label for="q25_a">(a) An ability to simulate empathy.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q25_b" name="q25" value="b">
+                    <label for="q25_b">(b) A genuine understanding of the semantics and context of commands.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q25_c" name="q25" value="c">
+                    <label for="q25_c">(c) The capacity to generate original poetry.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q25_d" name="q25" value="d">
+                    <label for="q25_d">(d) A human-like voice interface.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 26:</strong> SHRDLU exemplified a component-based, top-down approach. What does this mean?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q26_a" name="q26" value="a">
+                    <label for="q26_a">(a) It focused only on the output, ignoring internal processes.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q26_b" name="q26" value="b">
+                    <label for="q26_b">(b) It broke down complex tasks into distinct, interacting components.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q26_c" name="q26" value="c">
+                    <label for="q26_c">(c) It relied on a single, undifferentiated processing unit.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q26_d" name="q26" value="d">
+                    <label for="q26_d">(d) It learned purely from random input.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 27:</strong> Roger Shepard's mental rotation experiments (1971) found a direct, linear relationship between the time taken to solve a problem and what?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q27_a" name="q27" value="a">
+                    <label for="q27_a">(a) The color of the figures.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q27_b" name="q27" value="b">
+                    <label for="q27_b">(b) The complexity of the instructions.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q27_c" name="q27" value="c">
+                    <label for="q27_c">(c) The degree of rotation between two figures.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q27_d" name="q27" value="d">
+                    <label for="q27_d">(d) The number of figures presented.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 28:</strong> According to the sources, how is imagistic representation different from digital representation?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q28_a" name="q28" value="a">
+                    <label for="q28_a">(a) Imagistic representation is faster to process.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q28_b" name="q28" value="b">
+                    <label for="q28_b">(b) Imagistic representation has an arbitrary link between symbol and what it represents.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q28_c" name="q28" value="c">
+                    <label for="q28_c">(c) Imagistic representation resembles what it depicts, like a map.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q28_d" name="q28" value="d">
+                    <label for="q28_d">(d) Imagistic representation is always conscious.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 29:</strong> Stephen Kosslyn's (1973) mental scanning experiments showed that the time it took subjects to confirm a part of a memorized object varied directly with what?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q29_a" name="q29" value="a">
+                    <label for="q29_a">(a) The total size of the object.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q29_b" name="q29" value="b">
+                    <label for="q29_b">(b) The distance of the part from their mental "point of focus."</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q29_c" name="q29" value="c">
+                    <label for="q29_c">(c) The emotional significance of the object.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q29_d" name="q29" value="d">
+                    <label for="q29_d">(d) The recency of exposure to the object.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 30:</strong> David Marr's model of the human visual system broke down cognitive systems into three distinct levels of analysis. What are these levels?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q30_a" name="q30" value="a">
+                    <label for="q30_a">(a) Input, Output, and Feedback.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q30_b" name="q30" value="b">
+                    <label for="q30_b">(b) Sensory, Perceptual, and Motor.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q30_c" name="q30" value="c">
+                    <label for="q30_c">(c) Computational, Algorithmic, and Implementational.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q30_d" name="q30" value="d">
+                    <label for="q30_d">(d) Conscious, Subconscious, and Unconscious.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 31:</strong> At Marr's Computational Level, what is the primary focus?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q31_a" name="q31" value="a">
+                    <label for="q31_a">(a) How the system is physically built in the brain.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q31_b" name="q31" value="b">
+                    <label for="q31_b">(b) The specific steps (algorithm) used to solve a problem.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q31_c" name="q31" value="c">
+                    <label for="q31_c">(c) The exact information-processing problem the system is designed to solve (what and why).</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q31_d" name="q31" value="d">
+                    <label for="q31_d">(d) The historical development of the system.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 32:</strong> What is the main purpose of human vision, according to Marr, at the computational level?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q32_a" name="q32" value="a">
+                    <label for="q32_a">(a) To generate random visual patterns.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q32_b" name="q32" value="b">
+                    <label for="q32_b">(b) To build a description of the shapes and positions of things from images.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q32_c" name="q32" value="c">
+                    <label for="q32_c">(c) To directly control motor movements without conscious awareness.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q32_d" name="q32" value="d">
+                    <label for="q32_d">(d) To process only color information.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 33:</strong> Marr's Algorithmic Level describes how the visual system achieves 3D understanding through a series of increasingly complex representations. What is the very first step in this series?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q33_a" name="q33" value="a">
+                    <label for="q33_a">(a) 3-D Model Representation.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q33_b" name="q33" value="b">
+                    <label for="q33_b">(b) 2.5-D Sketch.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q33_c" name="q33" value="c">
+                    <label for="q33_c">(c) Primal Sketch.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q33_d" name="q33" value="d">
+                    <label for="q33_d">(d) Semantic Interpretation.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 34:</strong> Research into patients with brain damage by Elizabeth Warrington heavily influenced Marr's thinking at the computational level. What distinct vision problems did she study that led to conclusions about separate processing of shape and object identity?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q34_a" name="q34" value="a">
+                    <label for="q34_a">(a) Patients with memory loss only.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q34_b" name="q34" value="b">
+                    <label for="q34_b">(b) Patients with right vs. left parietal damage causing distinct vision problems.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q34_c" name="q34" value="c">
+                    <label for="q34_c">(c) Patients who could not hear but could see perfectly.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q34_d" name="q34" value="d">
+                    <label for="q34_d">(d) Patients with only motor control deficits.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 35:</strong> The "Two Visual Systems Hypothesis" suggests that information takes different paths based on what information it is. Damage in which brain area is associated with object identification problems?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q35_a" name="q35" value="a">
+                    <label for="q35_a">(a) Posterior Parietal Lobe.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q35_b" name="q35" value="b">
+                    <label for="q35_b">(b) Occipital Lobe.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q35_c" name="q35" value="c">
+                    <label for="q35_c">(c) Frontal Lobe.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q35_d" name="q35" value="d">
+                    <label for="q35_d">(d) Temporal Cortex.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 36:</strong> Which pathway in the "Two Visual Systems Hypothesis" is known as the "what" pathway, responsible for recognizing and identifying objects?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q36_a" name="q36" value="a">
+                    <label for="q36_a">(a) The Dorsal Route.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q36_b" name="q36" value="b">
+                    <label for="q36_b">(b) The Ventral Route.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q36_c" name="q36" value="c">
+                    <label for="q36_c">(c) The Auditory Pathway.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q36_d" name="q36" value="d">
+                    <label for="q36_d">(d) The Somatosensory Pathway.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 37:</strong> Artificial Neural Networks (ANNs) are organized into layers. How are units within these layers typically connected?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q37_a" name="q37" value="a">
+                    <label for="q37_a">(a) Each unit connects to other units in the same layer.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q37_b" name="q37" value="b">
+                    <label for="q37_b">(b) Each unit connects to units only in the layer after it, but not before.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q37_c" name="q37" value="c">
+                    <label for="q37_c">(c) Each unit connects to the layer before and after it, but not to other units in the same layer.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q37_d" name="q37" value="d">
+                    <label for="q37_d">(d) Units are randomly connected to any other unit in the network.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 38:</strong> What property of connections in ANNs enables the network to be trained?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q38_a" name="q38" value="a">
+                    <label for="q38_a">(a) Their fixed values.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q38_b" name="q38" value="b">
+                    <label for="q38_b">(b) Their random distribution.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q38_c" name="q38" value="c">
+                    <label for="q38_c">(c) The ability of assigned weights to be modified.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q38_d" name="q38" value="d">
+                    <label for="q38_d">(d) Their purely inhibitory nature.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 39:</strong> What are "hidden units" in an Artificial Neural Network?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q39_a" name="q39" value="a">
+                    <label for="q39_a">(a) Units that are only connected to the output layer.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q39_b" name="q39" value="b">
+                    <label for="q39_b">(b) Units that are only connected to the input layer.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q39_c" name="q39" value="c">
+                    <label for="q39_c">(c) Units that are only connected to units within the same layer.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q39_d" name="q39" value="d">
+                    <label for="q39_d">(d) Units that are only connected to units in other hidden layers.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 40:</strong> What does fMRI measure to infer brain activity?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q40_a" name="q40" value="a">
+                    <label for="q40_a">(a) Direct electrical impulses from neurons.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q40_b" name="q40" value="b">
+                    <label for="q40_b">(b) The temperature changes in brain tissue.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q40_c" name="q40" value="c">
+                    <label for="q40_c">(c) Blood oxygen levels (BOLD signal).</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q40_d" name="q40" value="d">
+                    <label for="q40_d">(d) The structural integrity of brain matter.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 41:</strong> According to Logothetis's experiments, the BOLD signal detected by fMRI is correlated with what aspect of neural activity?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q41_a" name="q41" value="a">
+                    <label for="q41_a">(a) Only the firing rate of individual neurons.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q41_b" name="q41" value="b">
+                    <label for="q41_b">(b) The sum of inputs to each neuron (local field potential).</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q41_c" name="q41" value="c">
+                    <label for="q41_c">(c) The production of neurotransmitters.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q41_d" name="q41" value="d">
+                    <label for="q41_d">(d) The structural changes in neuron dendrites.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 42:</strong> What is the brain's most fundamental feature, according to the source?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q42_a" name="q42" value="a">
+                    <label for="q42_a">(a) Its large size.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q42_b" name="q42" value="b">
+                    <label for="q42_b">(b) Its weight.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q42_c" name="q42" value="c">
+                    <label for="q42_c">(c) Its chemical composition.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q42_d" name="q42" value="d">
+                    <label for="q42_d">(d) Its connectivity.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 43:</strong> Which neuroimaging technique involves measuring blood flow using radioactive tracers and has low temporal resolution?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q43_a" name="q43" value="a">
+                    <label for="q43_a">(a) fMRI.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q43_b" name="q43" value="b">
+                    <label for="q43_b">(b) EEG.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q43_c" name="q43" value="c">
+                    <label for="q43_c">(c) MEG.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q43_d" name="q43" value="d">
+                    <label for="q43_d">(d) PET.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 44:</strong> What are the two types of neurites in a neuron?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q44_a" name="q44" value="a">
+                    <label for="q44_a">(a) Nucleus and cytoplasm.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q44_b" name="q44" value="b">
+                    <label for="q44_b">(b) Myelin sheath and nodes of Ranvier.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q44_c" name="q44" value="c">
+                    <label for="q44_c">(c) Dendrites and axon.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q44_d" name="q44" value="d">
+                    <label for="q44_d">(d) Cell body and terminal buttons.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 45:</strong> What happens if the sum of excitatory and inhibitory synapses reaching a neuron's dendrites exceeds the neuron's threshold?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q45_a" name="q45" value="a">
+                    <label for="q45_a">(a) The neuron stops functioning.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q45_b" name="q45" value="b">
+                    <label for="q45_b">(b) The neuron fires.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q45_c" name="q45" value="c">
+                    <label for="q45_c">(c) The neuron enters a resting state.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q45_d" name="q45" value="d">
+                    <label for="q45_d">(d) The neuron's weight decreases.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 46:</strong> Which function cannot be represented by a single layer artificial neural network due to failing to be linearly separable?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q46_a" name="q46" value="a">
+                    <label for="q46_a">(a) AND.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q46_b" name="q46" value="b">
+                    <label for="q46_b">(b) OR.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q46_c" name="q46" value="c">
+                    <label for="q46_c">(c) NOT.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q46_d" name="q46" value="d">
+                    <label for="q46_d">(d) XOR.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 47:</strong> What is the main difference between a single layer network and a multilayer network?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q47_a" name="q47" value="a">
+                    <label for="q47_a">(a) Single layer networks process visual information, multilayer networks process auditory.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q47_b" name="q47" value="b">
+                    <label for="q47_b">(b) Multilayer networks contain hidden units that only receive input from other units.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q47_c" name="q47" value="c">
+                    <label for="q47_c">(c) Single layer networks use only excitatory connections, multilayer use inhibitory.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q47_d" name="q47" value="d">
+                    <label for="q47_d">(d) Multilayer networks are always biologically plausible.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 48:</strong> In multilayer networks, what is the basic idea of the backpropagation algorithm?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q48_a" name="q48" value="a">
+                    <label for="q48_a">(a) Error is propagated forward through the network, from input to output.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q48_b" name="q48" value="b">
+                    <label for="q48_b">(b) Error is propagated backward through the network, from the output unit to the hidden units.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q48_c" name="q48" value="c">
+                    <label for="q48_c">(c) Weights are initialized randomly and never updated.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q48_d" name="q48" value="d">
+                    <label for="q48_d">(d) The network learns by receiving external feedback only.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 49:</strong> What is a key difference between computational neuroscientists and connectionist modelers?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q49_a" name="q49" value="a">
+                    <label for="q49_a">(a) Computational neuroscientists only use fMRI data, while connectionists use EEG.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q49_b" name="q49" value="b">
+                    <label for="q49_b">(b) Computational neuroscientists model biological neurons, while connectionists start with generic models to reproduce psychological phenomena.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q49_c" name="q49" value="c">
+                    <label for="q49_c">(c) Connectionists build models from scratch, while computational neuroscientists use existing software.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q49_d" name="q49" value="d">
+                    <label for="q49_d">(d) Computational neuroscientists focus on the macro level, while connectionists focus on the micro level.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 50:</strong> In a localist network, what does each unit typically code for?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q50_a" name="q50" value="a">
+                    <label for="q50_a">(a) A specific brain region.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q50_b" name="q50" value="b">
+                    <label for="q50_b">(b) A general cognitive process.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q50_c" name="q50" value="c">
+                    <label for="q50_c">(c) A specific feature in the input data.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q50_d" name="q50" value="d">
+                    <label for="q50_d">(d) The network's overall output.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 51:</strong> According to the sources, what is a fundamental feature of neural networks regarding information storage and processing?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q51_a" name="q51" value="a">
+                    <label for="q51_a">(a) They maintain a clear distinction between storage and processing.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q51_b" name="q51" value="b">
+                    <label for="q51_b">(b) Information storage and processing are completely separate entities.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q51_c" name="q51" value="c">
+                    <label for="q51_c">(c) There is no clear distinction between information storage and processing.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q51_d" name="q51" value="d">
+                    <label for="q51_d">(d) Information is only stored, never processed.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 52:</strong> What does the physical symbol system hypothesis propose regarding cognitive processes?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q52_a" name="q52" value="a">
+                    <label for="q52_a">(a) They are purely analog.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q52_b" name="q52" value="b">
+                    <label for="q52_b">(b) They work by manipulating symbols using clear, rule-based operations.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q52_c" name="q52" value="c">
+                    <label for="q52_c">(c) They are entirely based on random associations.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q52_d" name="q52" value="d">
+                    <label for="q52_d">(d) They operate independently of any physical substrate.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 53:</strong> How do neural networks typically differ from symbolic systems in terms of learning?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q53_a" name="q53" value="a">
+                    <label for="q53_a">(a) Neural networks are usually fixed and rule-based.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q53_b" name="q53" value="b">
+                    <label for="q53_b">(b) Neural networks cannot adapt through experience.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q53_c" name="q53" value="c">
+                    <label for="q53_c">(c) Neural networks can learn and adapt through experience.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q53_d" name="q53" value="d">
+                    <label for="q53_d">(d) Symbolic systems are better at pattern recognition.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 54:</strong> What is the definition of neuroscience?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q54_a" name="q54" value="a">
+                    <label for="q54_a">(a) The study of observable behavior only.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q54_b" name="q54" value="b">
+                    <label for="q54_b">(b) The study of the nervous system anatomy and physiology.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q54_c" name="q54" value="c">
+                    <label for="q54_c">(c) The study of mathematical logic and algorithms.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q54_d" name="q54" value="d">
+                    <label for="q54_d">(d) The study of human-computer interaction.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 55:</strong> Which lobe of the brain is primarily responsible for visual processing?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q55_a" name="q55" value="a">
+                    <label for="q55_a">(a) Frontal lobe.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q55_b" name="q55" value="b">
+                    <label for="q55_b">(b) Parietal lobe.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q55_c" name="q55" value="c">
+                    <label for="q55_c">(c) Occipital lobe.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q55_d" name="q55" value="d">
+                    <label for="q55_d">(d) Temporal lobe.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 56:</strong> What is "contralateral organization" in the brain?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q56_a" name="q56" value="a">
+                    <label for="q56_a">(a) Information is processed on the same side of the brain it is received from.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q56_b" name="q56" value="b">
+                    <label for="q56_b">(b) The brain processes visual information in the frontal lobe.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q56_c" name="q56" value="c">
+                    <label for="q56_c">(c) Information from one side of the body is mapped onto the opposite side of the brain.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q56_d" name="q56" value="d">
+                    <label for="q56_d">(d) Both hemispheres process information identically.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 57:</strong> Which brain imaging technique has high temporal resolution (millisecond scale) but poor spatial resolution, helpful in studying perception and attention?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q57_a" name="q57" value="a">
+                    <label for="q57_a">(a) PET.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q57_b" name="q57" value="b">
+                    <label for="q57_b">(b) fMRI.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q57_c" name="q57" value="c">
+                    <label for="q57_c">(c) EEG/ERPs.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q57_d" name="q57" value="d">
+                    <label for="q57_d">(d) KESM.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 58:</strong> What is the main utility of the Knife-Edge Scanning Microscope (KESM)?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q58_a" name="q58" value="a">
+                    <label for="q58_a">(a) Measuring real-time brain activity during tasks.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q58_b" name="q58" value="b">
+                    <label for="q58_b">(b) Producing static 3D maps of entire brains for structural and connectivity studies.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q58_c" name="q58" value="c">
+                    <label for="q58_c">(c) Stimulating specific brain areas non-invasively.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q58_d" name="q58" value="d">
+                    <label for="q58_d">(d) Recording the electrical activity of single neurons in live subjects.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 59:</strong> What are dendrites in a typical neuron primarily responsible for?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q59_a" name="q59" value="a">
+                    <label for="q59_a">(a) Carrying the electrical signal down the neuron.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q59_b" name="q59" value="b">
+                    <label for="q59_b">(b) Releasing neurotransmitters into the synapse.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q59_c" name="q59" value="c">
+                    <label for="q59_c">(c) Receiving signals from other neurons.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q59_d" name="q59" value="d">
+                    <label for="q59_d">(d) Containing the nucleus and integrating inputs.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 60:</strong> Which neurotransmitter is the main inhibitory transmitter in the brain?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q60_a" name="q60" value="a">
+                    <label for="q60_a">(a) Acetylcholine.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q60_b" name="q60" value="b">
+                    <label for="q60_b">(b) Dopamine.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q60_c" name="q60" value="c">
+                    <label for="q60_c">(c) GABA.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q60_d" name="q60" value="d">
+                    <label for="q60_d">(d) Glutamate.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 61:</strong> What is the large bundle of connecting axons that transfers information back and forth between the cerebral hemispheres?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q61_a" name="q61" value="a">
+                    <label for="q61_a">(a) The Thalamus.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q61_b" name="q61" value="b">
+                    <label for="q61_b">(b) The Cerebellum.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q61_c" name="q61" value="c">
+                    <label for="q61_c">(c) The Corpus Callosum.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q61_d" name="q61" value="d">
+                    <label for="q61_d">(d) The Brain Stem.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 62:</strong> What term describes a large cleft or separation between two areas of brain tissue?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q62_a" name="q62" value="a">
+                    <label for="q62_a">(a) Gyrus.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q62_b" name="q62" value="b">
+                    <label for="q62_b">(b) Sulcus.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q62_c" name="q62" value="c">
+                    <label for="q62_c">(c) Fissure.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q62_d" name="q62" value="d">
+                    <label for="q62_d">(d) Nucleus.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 63:</strong> Which lobe is located anteriorly, bounded by the central sulcus and lateral fissure, and is involved in reasoning and planning?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q63_a" name="q63" value="a">
+                    <label for="q63_a">(a) Temporal lobe.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q63_b" name="q63" value="b">
+                    <label for="q63_b">(b) Parietal lobe.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q63_c" name="q63" value="c">
+                    <label for="q63_c">(c) Occipital lobe.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q63_d" name="q63" value="d">
+                    <label for="q63_d">(d) Frontal lobe.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 64:</strong> In the visual system, after initial processing in the primary visual cortex, what are the two main streams that visual input is divided into?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q64_a" name="q64" value="a">
+                    <label for="q64_a">(a) Sensory and Motor pathways.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q64_b" name="q64" value="b">
+                    <label for="q64_b">(b) Conscious and Unconscious pathways.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q64_c" name="q64" value="c">
+                    <label for="q64_c">(c) Dorsal and Ventral pathways.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q64_d" name="q64" value="d">
+                    <label for="q64_d">(d) Auditory and Somatosensory pathways.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 65:</strong> Damage to which visual pathway is typically linked to Visual Agnosias?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q65_a" name="q65" value="a">
+                    <label for="q65_a">(a) Dorsal pathway.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q65_b" name="q65" value="b">
+                    <label for="q65_b">(b) Ventral pathway.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q65_c" name="q65" value="c">
+                    <label for="q65_c">(c) Optic nerve.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q65_d" name="q65" value="d">
+                    <label for="q65_d">(d) Reticular activating system.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 66:</strong> What is Apperceptive Agnosia characterized by?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q66_a" name="q66" value="a">
+                    <label for="q66_a">(a) Inability to recognize faces.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q66_b" name="q66" value="b">
+                    <label for="q66_b">(b) Inability to recall names of objects.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q66_c" name="q66" value="c">
+                    <label for="q66_c">(c) Cannot assemble object features into a meaningful whole despite intact basic visual abilities.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q66_d" name="q66" value="d">
+                    <label for="q66_d">(d) Can perceive whole objects but can't name or identify them.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 67:</strong> What is Prosopagnosia?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q67_a" name="q67" value="a">
+                    <label for="q67_a">(a) A type of amnesia.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q67_b" name="q67" value="b">
+                    <label for="q67_b">(b) An inability to recognize sounds.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q67_c" name="q67" value="c">
+                    <label for="q67_c">(c) An inability to recognize faces.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q67_d" name="q67" value="d">
+                    <label for="q67_d">(d) A disorder of motor control.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 68:</strong> What is the "binding problem" in cognitive science?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q68_a" name="q68" value="a">
+                    <label for="q68_a">(a) How different memories are linked together.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q68_b" name="q68" value="b">
+                    <label for="q68_b">(b) How different features of an object processed in separate brain areas are combined into a unified perception.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q68_c" name="q68" value="c">
+                    <label for="q68_c">(c) How language is linked to thought.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q68_d" name="q68" value="d">
+                    <label for="q68_d">(d) How conscious and unconscious processes interact.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 69:</strong> What hypothesis suggests that an object is represented by the coordinated and phase-locked activity of a constellation of cells?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q69_a" name="q69" value="a">
+                    <label for="q69_a">(a) The Grandmother Cell hypothesis.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q69_b" name="q69" value="b">
+                    <label for="q69_b">(b) The Neural Synchrony hypothesis.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q69_c" name="q69" value="c">
+                    <label for="q69_c">(c) The Equipotentiality principle.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q69_d" name="q69" value="d">
+                    <label for="q69_d">(d) The Reflex Arc hypothesis.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 70:</strong> Which brain structure, located in the hindbrain, controls overall arousal and alertness and is linked to sustaining attention over time?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q70_a" name="q70" value="a">
+                    <label for="q70_a">(a) Thalamus.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q70_b" name="q70" value="b">
+                    <label for="q70_b">(b) Superior Colliculus.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q70_c" name="q70" value="c">
+                    <label for="q70_c">(c) Reticular Activating System (RAS).</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q70_d" name="q70" value="d">
+                    <label for="q70_d">(d) Cingulate Cortex.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 71:</strong> What is Hemispatial Neglect?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q71_a" name="q71" value="a">
+                    <label for="q71_a">(a) An inability to speak fluently.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q71_b" name="q71" value="b">
+                    <label for="q71_b">(b) Ignoring stimuli or one side of space and body, typically from right hemisphere damage.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q71_c" name="q71" value="c">
+                    <label for="q71_c">(c) A disorder of episodic memory.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q71_d" name="q71" value="d">
+                    <label for="q71_d">(d) Difficulty recognizing familiar faces.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 72:</strong> Karl Lashley's principle of equipotentiality suggested what about memory?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q72_a" name="q72" value="a">
+                    <label for="q72_a">(a) Memory is localized to a single brain area.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q72_b" name="q72" value="b">
+                    <label for="q72_b">(b) All brain areas contribute equally to memory.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q72_c" name="q72" value="c">
+                    <label for="q72_c">(c) Memory is primarily stored in the spinal cord.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q72_d" name="q72" value="d">
+                    <label for="q72_d">(d) Memory is formed only through classical conditioning.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 73:</strong> Which brain area is key to memory consolidation (transferring to long-term memory), with damage causing anterograde amnesia?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q73_a" name="q73" value="a">
+                    <label for="q73_a">(a) Amygdala.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q73_b" name="q73" value="b">
+                    <label for="q73_b">(b) Basal ganglia.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q73_c" name="q73" value="c">
+                    <label for="q73_c">(c) Hippocampus.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q73_d" name="q73" value="d">
+                    <label for="q73_d">(d) Cerebellum.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 74:</strong> What type of memory is supported by the basal ganglia?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q74_a" name="q74" value="a">
+                    <label for="q74_a">(a) Declarative memories (facts, events).</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q74_b" name="q74" value="b">
+                    <label for="q74_b">(b) Episodic memories.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q74_c" name="q74" value="c">
+                    <label for="q74_c">(c) Procedural knowledge (skills, habits).</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q74_d" name="q74" value="d">
+                    <label for="q74_d">(d) Semantic memories.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 75:</strong> According to Herbert Simon's computational theory of emotions, what do emotions primarily function as within the CNS?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q75_a" name="q75" value="a">
+                    <label for="q75_a">(a) Long-term storage units for past experiences.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q75_b" name="q75" value="b">
+                    <label for="q75_b">(b) Mechanisms for generating random behaviors.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q75_c" name="q75" value="c">
+                    <label for="q75_c">(c) Interrupt mechanisms that substitute new goals and behaviors.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q75_d" name="q75" value="d">
+                    <label for="q75_d">(d) Permanent states of physiological arousal.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 76:</strong> Paul Ekman's basic emotion theory makes two main claims, including that particular facial expressions are universally associated with particular emotions. Which of the following is NOT on his list of basic emotions?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q76_a" name="q76" value="a">
+                    <label for="q76_a">(a) Happiness.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q76_b" name="q76" value="b">
+                    <label for="q76_b">(b) Surprise.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q76_c" name="q76" value="c">
+                    <label for="q76_c">(c) Envy.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q76_d" name="q76" value="d">
+                    <label for="q76_d">(d) Fear.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 77:</strong> What are the two most popular dimensions used in the "affective space" to distinguish different affective states?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q77_a" name="q77" value="a">
+                    <label for="q77_a">(a) Memory and attention.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q77_b" name="q77" value="b">
+                    <label for="q77_b">(b) Learning and perception.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q77_c" name="q77" value="c">
+                    <label for="q77_c">(c) Valence and Arousal.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q77_d" name="q77" value="d">
+                    <label for="q77_d">(d) Cognition and behavior.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 78:</strong> What subcortical area forms part of the limbic system and has been shown to be especially important for fear experience and recognition, as seen in the case of S.M.?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q78_a" name="q78" value="a">
+                    <label for="q78_a">(a) Hippocampus.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q78_b" name="q78" value="b">
+                    <label for="q78_b">(b) Thalamus.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q78_c" name="q78" value="c">
+                    <label for="q78_c">(c) Amygdala.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q78_d" name="q78" value="d">
+                    <label for="q78_d">(d) Hypothalamus.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 79:</strong> What are the three core ideas of Bayesianism as a framework in cognitive science?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q79_a" name="q79" value="a">
+                    <label for="q79_a">(a) Belief is fixed, probabilities are irrelevant, learning is unconscious.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q79_b" name="q79" value="b">
+                    <label for="q79_b">(b) Belief comes in degrees, degrees conform to probability rules, learning occurs via Bayesian updating.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q79_c" name="q79" value="c">
+                    <label for="q79_c">(c) Belief is absolute, learning is only through reinforcement, perception is direct.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q79_d" name="q79" value="d">
+                    <label for="q79_d">(d) Belief is always conscious, learning is always supervised, evidence is always perfect.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 80:</strong> In Bayesian terms, how is "Posterior Probability" calculated?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q80_a" name="q80" value="a">
+                    <label for="q80_a">(a) Posterior = Likelihood + Prior.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q80_b" name="q80" value="b">
+                    <label for="q80_b">(b) Posterior = Evidence / Likelihood.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q80_c" name="q80" value="c">
+                    <label for="q80_c">(c) Posterior = Likelihood $\times$ Prior / Evidence Probability.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q80_d" name="q80" value="d">
+                    <label for="q80_d">(d) Posterior = Prior / Likelihood.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 81:</strong> What does the "Expected Utility Theory" help to do?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q81_a" name="q81" value="a">
+                    <label for="q81_a">(a) Predict emotional responses.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q81_b" name="q81" value="b">
+                    <label for="q81_b">(b) Explain the origin of consciousness.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q81_c" name="q81" value="c">
+                    <label for="q81_c">(c) Make optimal decisions by weighing probabilities and preferences (utilities).</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q81_d" name="q81" value="d">
+                    <label for="q81_d">(d) Measure brain activity during perception.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 82:</strong> What is the "Modularity of Mind" hypothesis proposed by Jerry Fodor?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q82_a" name="q82" value="a">
+                    <label for="q82_a">(a) The mind is a single, undifferentiated processing unit.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q82_b" name="q82" value="b">
+                    <label for="q82_b">(b) The mind has special modular subsystems to handle distinct tasks like perception or language.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q82_c" name="q82" value="c">
+                    <label for="q82_c">(c) All cognitive processes are non-modular and distributed.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q82_d" name="q82" value="d">
+                    <label for="q82_d">(d) The mind learns only through direct sensory experience.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 83:</strong> According to Fodor, what are key properties of central processing, as opposed to modular subsystems?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q83_a" name="q83" value="a">
+                    <label for="q83_a">(a) Domain-specific and encapsulated.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q83_b" name="q83" value="b">
+                    <label for="q83_b">(b) Mandatory and fast.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q83_c" name="q83" value="c">
+                    <label for="q83_c">(c) Quinean (beliefs interconnected) and Isotropic (any info affects evaluation).</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q83_d" name="q83" value="d">
+                    <label for="q83_d">(d) Fixed neural architectures.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 84:</strong> What is the "Massive Modularity Hypothesis"?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q84_a" name="q84" value="a">
+                    <label for="q84_a">(a) The human mind consists of a single, highly flexible module.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q84_b" name="q84" value="b">
+                    <label for="q84_b">(b) The human mind consists of a large number of domain-specific modules, evolved to solve ancestral problems.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q84_c" name="q84" value="c">
+                    <label for="q84_c">(c) Modules are only found in non-human animals.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q84_d" name="q84" value="d">
+                    <label for="q84_d">(d) All learning happens through classical conditioning.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 85:</strong> The "Cheater Detection Module" is based on findings related to reasoning with conditional rules, particularly which task?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q85_a" name="q85" value="a">
+                    <label for="q85_a">(a) The Prisoner's Dilemma.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q85_b" name="q85" value="b">
+                    <label for="q85_b">(b) The Stroop Effect.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q85_c" name="q85" value="c">
+                    <label for="q85_c">(c) The Wason Selection Task.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q85_d" name="q85" value="d">
+                    <label for="q85_d">(d) The Marshmallow Test.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 86:</strong> What kind of cognitive architecture is ACT-R (Adaptive Control of Thought)?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q86_a" name="q86" value="a">
+                    <label for="q86_a">(a) Purely symbolic.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q86_b" name="q86" value="b">
+                    <label for="q86_b">(b) Purely subsymbolic.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q86_c" name="q86" value="c">
+                    <label for="q86_c">(c) A hybrid model that combines symbolic and subsymbolic processes.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q86_d" name="q86" value="d">
+                    <label for="q86_d">(d) A model based solely on brain anatomy.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 87:</strong> In ACT-R, what form does "Declarative memory" take?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q87_a" name="q87" value="a">
+                    <label for="q87_a">(a) Production rules.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q87_b" name="q87" value="b">
+                    <label for="q87_b">(b) Action schemas.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q87_c" name="q87" value="c">
+                    <label for="q87_c">(c) Symbolic chunks.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q87_d" name="q87" value="d">
+                    <label for="q87_d">(d) Neural network weights.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 88:</strong> What is the "principle of segregation" in brain mapping?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q88_a" name="q88" value="a">
+                    <label for="q88_a">(a) The idea that all brain regions function as one integrated unit.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q88_b" name="q88" value="b">
+                    <label for="q88_b">(b) The idea that the cerebral cortex is divided into segregated areas with distinct neuronal populations.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q88_c" name="q88" value="c">
+                    <label for="q88_c">(c) The method of connecting different brain regions through surgery.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q88_d" name="q88" value="d">
+                    <label for="q88_d">(d) The study of brain damage effects on behavior.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 89:</strong> What is anatomical connectivity in brain mapping?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q89_a" name="q89" value="a">
+                    <label for="q89_a">(a) How brain regions function during specific cognitive tasks.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q89_b" name="q89" value="b">
+                    <label for="q89_b">(b) How brain regions relate to each other physically.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q89_c" name="q89" value="c">
+                    <label for="q89_c">(c) The statistical correlation of activity levels between brain regions.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q89_d" name="q89" value="d">
+                    <label for="q89_d">(d) The conscious awareness of brain activity.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 90:</strong> Which type of resolution in brain mapping refers to the ability to distinguish or capture changes or events that occur over time?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q90_a" name="q90" value="a">
+                    <label for="q90_a">(a) Spatial resolution.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q90_b" name="q90" value="b">
+                    <label for="q90_b">(b) Temporal resolution.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q90_c" name="q90" value="c">
+                    <label for="q90_c">(c) Functional resolution.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q90_d" name="q90" value="d">
+                    <label for="q90_d">(d) Structural resolution.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 91:</strong> What is the "locus-of-selection problem" in attention research?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q91_a" name="q91" value="a">
+                    <label for="q91_a">(a) Determining the optimal number of attention tasks.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q91_b" name="q91" value="b">
+                    <label for="q91_b">(b) Determining whether attention is an early or late selection phenomenon.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q91_c" name="q91" value="c">
+                    <label for="q91_c">(c) Identifying the brain region responsible for attention.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q91_d" name="q91" value="d">
+                    <label for="q91_d">(d) Measuring the total capacity of attention.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 92:</strong> What does "functional connectivity" in neuroimaging refer to?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q92_a" name="q92" value="a">
+                    <label for="q92_a">(a) The causal flow of information between brain areas.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q92_b" name="q92" value="b">
+                    <label for="q92_b">(b) The physical wiring diagram of the brain.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q92_c" name="q92" value="c">
+                    <label for="q92_c">(c) Statistical correlations between levels of activity in physically separate parts of the brain.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q92_d" name="q92" value="d">
+                    <label for="q92_d">(d) The ability of a brain region to perform a specific function.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 93:</strong> How does "effective connectivity" differ from "functional connectivity" in neuroimaging?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q93_a" name="q93" value="a">
+                    <label for="q93_a">(a) Effective connectivity measures physical distance, while functional measures activation.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q93_b" name="q93" value="b">
+                    <label for="q93_b">(b) Effective connectivity measures statistical correlations, while functional measures causal influence.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q93_c" name="q93" value="c">
+                    <label for="q93_c">(c) Effective connectivity measures how neural systems interact and information flows causally, while functional is statistical.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q93_d" name="q93" value="d">
+                    <label for="q93_d">(d) Effective connectivity is a hypothetical concept, while functional connectivity is directly observable.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 94:</strong> According to Fodor, what does learning a language involve besides mastering rules?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q94_a" name="q94" value="a">
+                    <label for="q94_a">(a) Only memorizing words without understanding their meaning.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q94_b" name="q94" value="b">
+                    <label for="q94_b">(b) Forming hypotheses about word and sentence meanings, testing them, and revising as needed.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q94_c" name="q94" value="c">
+                    <label for="q94_c">(c) Relying solely on unconscious imitation.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q94_d" name="q94" value="d">
+                    <label for="q94_d">(d) Being born with complete linguistic knowledge.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 95:</strong> What is the "Poverty of the Stimulus" argument used by Fodor and Chomsky to support the idea of innate linguistic knowledge?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q95_a" name="q95" value="a">
+                    <label for="q95_a">(a) Children are exposed to too much linguistic information.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q95_b" name="q95" value="b">
+                    <label for="q95_b">(b) Children are not exposed to enough information to learn a language from scratch.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q95_c" name="q95" value="c">
+                    <label for="q95_c">(c) Language learning is a purely cultural phenomenon.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q95_d" name="q95" value="d">
+                    <label for="q95_d">(d) Animals can learn human language with sufficient training.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 96:</strong> In the context of child language learning of past tense, what is "overregularization"?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q96_a" name="q96" value="a">
+                    <label for="q96_a">(a) Consistently using only irregular verbs correctly.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q96_b" name="q96" value="b">
+                    <label for="q96_b">(b) Applying the "-ed" ending to irregular verbs (e.g., "gived" instead of "gave").</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q96_c" name="q96" value="c">
+                    <label for="q96_c">(c) Learning new verbs too slowly.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q96_d" name="q96" value="d">
+                    <label for="q96_d">(d) Speaking in full sentences from birth.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 97:</strong> The Rumelhart & McClelland (1986) connectionist model of tense learning used which learning algorithm?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q97_a" name="q97" value="a">
+                    <label for="q97_a">(a) Backpropagation.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q97_b" name="q97" value="b">
+                    <label for="q97_b">(b) Gradient Descent.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q97_c" name="q97" value="c">
+                    <label for="q97_c">(c) Perceptron Convergence Rule.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q97_d" name="q97" value="d">
+                    <label for="q97_d">(d) Hebbian Learning (unsupervised).</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 98:</strong> What is the first step in understanding a language, according to the transitional probabilities model in developmental linguistics?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q98_a" name="q98" value="a">
+                    <label for="q98_a">(a) Learning complex grammar rules.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q98_b" name="q98" value="b">
+                    <label for="q98_b">(b) Dividing speech into individual words (word segmentation).</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q98_c" name="q98" value="c">
+                    <label for="q98_c">(c) Identifying abstract concepts.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q98_d" name="q98" value="d">
+                    <label for="q98_d">(d) Developing a complete vocabulary.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 99:</strong> What is "phenomenal consciousness" (P-consciousness) according to Ned Block?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q99_a" name="q99" value="a">
+                    <label for="q99_a">(a) A state that is poised for direct control of thought and action.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q99_b" name="q99" value="b">
+                    <label for="q99_b">(b) The ability to report on one's mental states.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q99_c" name="q99" value="c">
+                    <label for="q99_c">(c) Experience, such as hearing, smelling, or feeling emotions.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q99_d" name="q99" value="d">
+                    <label for="q99_d">(d) The logical processing of information.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="question">
+            <p><strong>Question 100:</strong> According to David Chalmers, what is the "hard problem" of consciousness?</p>
+            <div class="options">
+        
+                <div class="option">
+                    <input type="radio" id="q100_a" name="q100" value="a">
+                    <label for="q100_a">(a) Explaining how cognitive systems integrate information.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q100_b" name="q100" value="b">
+                    <label for="q100_b">(b) Explaining how attention gets focused.</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q100_c" name="q100" value="c">
+                    <label for="q100_c">(c) Explaining experience, the subjective aspect ("what it is like").</label>
+                </div>
+            
+                <div class="option">
+                    <input type="radio" id="q100_d" name="q100" value="d">
+                    <label for="q100_d">(d) Explaining the deliberate control of behavior.</label>
+                </div>
+            
+            </div>
+        </div>
+        
+        <button type="button" onclick="checkAnswers()">Submit Answers</button>
+    </form>
+    
+    <div id="results" class="results" style="display: none;">
+        <h2>Results</h2>
+        <p id="score" class="score"></p>
+        <div id="answerDetails"></div>
+    </div>
+    
+    <script>
+        const correctAnswers = ['c', 'b', 'c', 'c', 'b', 'c', 'c', 'b', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'b', 'b', 'c', 'b', 'b', 'c', 'b', 'b', 'c', 'c', 'b', 'c', 'c', 'b', 'c', 'b', 'd', 'b', 'c', 'c', 'c', 'c', 'b', 'd', 'd', 'c', 'b', 'd', 'b', 'b', 'b', 'c', 'c', 'b', 'c', 'b', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'd', 'c', 'b', 'c', 'c', 'b', 'b', 'c', 'b', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'b', 'c', 'c', 'c', 'd', 'b', 'b', 'b', 'b', 'c', 'c', 'b', 'c', 'c', 'b', 'b', 'b', 'c', 'c'];
+        
+        function checkAnswers() {
+            let score = 0;
+            let answerDetails = '';
+            
+            for (let i = 0; i < 100; i++) {
+                const questionNum = i + 1;
+                const selectedOption = document.querySelector(`input[name="q${questionNum}"]:checked`);
+                
+                if (selectedOption) {
+                    const userAnswer = selectedOption.value;
+                    const isCorrect = userAnswer === correctAnswers[i];
+                    
+                    if (isCorrect) {
+                        score++;
+                        answerDetails += `<p class="correct">Question ${questionNum}: Correct!</p>`;
+                    } else {
+                        answerDetails += `<p class="incorrect">Question ${questionNum}: Incorrect. The correct answer is ${correctAnswers[i].toUpperCase()}.</p>`;
+                    }
+                } else {
+                    answerDetails += `<p class="incorrect">Question ${questionNum}: Not answered. The correct answer is ${correctAnswers[i].toUpperCase()}.</p>`;
+                }
+            }
+            
+            const percentage = Math.round((score / 100) * 100);
+            document.getElementById('score').innerHTML = `Score: ${score}/${ 100 } (${percentage}%)`;
+            document.getElementById('answerDetails').innerHTML = answerDetails;
+            document.getElementById('results').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
