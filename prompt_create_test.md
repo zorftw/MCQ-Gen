@@ -44,7 +44,6 @@ You may format it like this:
 ...etcetera
 "
 
-- Schrijf het document in het Nederlands
-- Do not write anything in English, unless it is displayed like that in the respective source
+- The order of the questions does not matter. 
 - Do not write any citations for the answers or any other options
 - Do not create any link or direct reference to the source material, simply write down the content as is.
